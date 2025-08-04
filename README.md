@@ -39,8 +39,8 @@
 ### Шаг 1: Клонирование репозитория
 
 ```bash
-git clone <URL-вашего-репозитория>
-cd <имя-папки-с-проектом>
+git clone git@github.com:Gumer79/shift_project.git
+cd shift_project
 ```
 
 ### Шаг 2: Настройка переменных окружения
@@ -53,7 +53,6 @@ DB_USER=gm
 DB_PASSWORD=gm
 DB_NAME=weather_data
 ```
-
 ### Шаг 3: Запуск базы данных
 
 Запустите PostgreSQL в Docker-контейнере.
@@ -66,7 +65,21 @@ docker-compose up -d --build
 Эта команда создаст и запустит контейнер с PostgreSQL, а также выполнит скрипт `init/init.sql` для создания необходимой таблицы.
 
 ### Шаг 4: Установка зависимостей
+Выполните команду для создания виртуальной среды.
 
+```bash
+python -m venv venv
+```
+Активировать виртуальную среду. 
+
+macOS/Linux:
+```bash
+source venv/bin/activate
+```
+Windows:
+```
+.\venv\Scripts\activate
+```
 Установите все необходимые Python-библиотеки.
 
 ```bash
