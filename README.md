@@ -41,6 +41,7 @@
 ```bash
 git clone <URL-вашего-репозитория>
 cd <имя-папки-с-проектом>
+```
 
 ### Шаг 2: Настройка переменных окружения
 
@@ -51,6 +52,7 @@ cd <имя-папки-с-проектом>
 DB_USER=gm
 DB_PASSWORD=gm
 DB_NAME=weather_data
+```
 
 ### Шаг 3: Запуск базы данных
 
@@ -59,6 +61,7 @@ DB_NAME=weather_data
 
 ```bash
 docker-compose up -d --build
+```
 
 Эта команда создаст и запустит контейнер с PostgreSQL, а также выполнит скрипт `init/init.sql` для создания необходимой таблицы.
 
@@ -68,6 +71,7 @@ docker-compose up -d --build
 
 ```bash
 pip install -r requirements.txt
+```
 
 
 ## ▶️ Использование
@@ -86,11 +90,13 @@ pip install -r requirements.txt
 Загрузить данные за определенный период и в БД, и в CSV:
 ```bash
 python app.py --start-date 2025-07-01 --end-date 2025-07-05
+```
 
 Сохранить данные только в CSV-файл:
 
 ```bash
 python app.py --start-date 2025-08-01 --end-date 2025-08-01 --load_type csv
+```
 
 Результаты в формате CSV будут сохранены в директории `csv_data/`.
 
